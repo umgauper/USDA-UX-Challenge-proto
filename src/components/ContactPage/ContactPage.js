@@ -12,7 +12,7 @@ class ContactPage extends Component {
   };
 
   render() {
-    const title = 'Contact Us';
+    const title = 'contact Una';
     this.context.onSetTitle(title);
     return (
       <div className="ContactPage">
