@@ -2,15 +2,18 @@ import React, { PropTypes, Component } from 'react';
 import styles from './Form.scss';
 import withStyles from '../../decorators/withStyles.js';
 import Section1 from '../Section1';
+import Formsy, {Form} from 'formsy-react';
 
-@withStyles(styles)
-class Form extends Component {
+//@withStyles(styles);
+class USDAForm extends Component {
 
   render() {
     return (
-      <Section1/>
+      <Formsy.Form>
+        <Section1/>
+      </Formsy.Form>
     );
-  }
+   }
 }
 
-export default Form;
+export default USDAForm

@@ -3,7 +3,7 @@
 import React, { PropTypes, Component } from 'react';
 import styles from './ContentPage.scss';
 import withStyles from '../../decorators/withStyles';
-import Form from '../Form';
+import USDAForm from '../USDAForm';
 
 @withStyles(styles)
 class ContentPage extends Component {
@@ -23,7 +23,7 @@ class ContentPage extends Component {
     return (
       <div className="ContentPage">
         <div className="ContentPage-container">
-          <Form/>
+          <USDAForm/>
           {
             this.props.path === '/' ? null : <h1>{this.props.title}</h1>
           }

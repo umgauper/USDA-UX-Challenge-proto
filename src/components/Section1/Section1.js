@@ -77,19 +77,25 @@ class Section1 extends Component {
 
     var subsections = [
      <NumberOfChildren
-     handleNextClick={this.handleNextClick.bind(this)}
-     handleUserInputNumber={this.handleUserInputNumber.bind(this)}
+       name="number"
+       handleNextClick={this.handleNextClick.bind(this)}
+       handleUserInputNumber={this.handleUserInputNumber.bind(this)}
+       validations="isNumeric"
+       validationError="Please enter a valid number"
      />,
      <ChildNamesInputs
-     UserInputFunctions={UserInputFunctions}
-     handleNextClick={this.handleNextClick.bind(this)}
+       name="child-names"
+       UserInputFunctions={UserInputFunctions}
+       handleNextClick={this.handleNextClick.bind(this)}
+       validations="isAlpha"
+       validationError="Please enter a valid name"
      />,
      <ChildQuestions
-     IsStudentFunctions={IsStudentFunctions}
-     IsFosterFunctions={IsFosterFunctions}
-     IsMigrantFunctions={IsMigrantFunctions}
-     j={this.state.j}
-     children={this.state.children}
+       IsStudentFunctions={IsStudentFunctions}
+       IsFosterFunctions={IsFosterFunctions}
+       IsMigrantFunctions={IsMigrantFunctions}
+       j={this.state.j}
+       children={this.state.children}
      />];
     return <div>{subsections[this.state.i]}</div>;
   }
