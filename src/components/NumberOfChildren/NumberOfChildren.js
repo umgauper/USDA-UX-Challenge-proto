@@ -21,20 +21,17 @@ class NumberOfChildren extends Component {
 
     return <div>
             <h3>How many children live in your household?</h3>
-            <p>value: {this.props.getValue()}</p>
-            <p>ErrorMessageIsNotNull: {(errorMessage !== null).toString()}</p>
-
             <input
               type="text"
               name={this.props.name}
               value={this.props.getValue()}
               onChange={handleInput}
-              className="number"/>
+              className="number"
+              maxLength="2"/> //possible that any household has >= 100 children?
              <button
                onClick={handleClick}
                disabled={errorMessage || !this.props.getValue()}>Next
               </button>
-
             <span
               className="validation-error">{errorMessage}
             </span>

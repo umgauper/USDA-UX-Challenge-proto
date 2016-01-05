@@ -5,6 +5,10 @@ import ChildNamesInputs from '../ChildNamesInputs'
 import ChildQuestions from '../ChildQuestions'
 
 //@withStyles(styles)
+Formsy.addValidationRule('isName', function(values, value) {
+  return /^[a-z]+\-[a-z]+$|^[a-z]+$/.test(value);
+});
+
 class Section1 extends Component {
   constructor(props) {
     super(props); //what is this doing?
@@ -87,8 +91,6 @@ class Section1 extends Component {
        name="child-names"
        UserInputFunctions={UserInputFunctions}
        handleNextClick={this.handleNextClick.bind(this)}
-       validations="isAlpha"
-       validationError="Please enter a valid name"
      />,
      <ChildQuestions
        IsStudentFunctions={IsStudentFunctions}

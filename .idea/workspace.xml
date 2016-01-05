@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d59a5222-9a3f-4c77-99ad-1a9378f1f88f" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/Form/Form.js" afterPath="$PROJECT_DIR$/src/components/USDAForm/USDAForm.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/Form/Form.scss" afterPath="$PROJECT_DIR$/src/components/USDAForm/Form.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/Form/package.json" afterPath="$PROJECT_DIR$/src/components/USDAForm/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/ChildNamesInputs/ChildNamesInputs.js" afterPath="$PROJECT_DIR$/src/components/ChildNamesInputs/ChildNamesInputs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/ContentPage/ContentPage.js" afterPath="$PROJECT_DIR$/src/components/ContentPage/ContentPage.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/NumberOfChildren/NumberOfChildren.js" afterPath="$PROJECT_DIR$/src/components/NumberOfChildren/NumberOfChildren.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Section1/Section1.js" afterPath="$PROJECT_DIR$/src/components/Section1/Section1.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/NumberOfChildren/package.json" afterPath="$PROJECT_DIR$/src/components/NumberOfChildren/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes.js" afterPath="$PROJECT_DIR$/src/routes.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="USDA.iws" />
@@ -38,9 +31,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding>
-                <marker date="1451672196236" expanded="true" signature="315:369" placeholder="&lt;xml/&gt;" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -48,8 +39,8 @@
       <file leaf-file-name="Section1.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Section1/Section1.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33224756">
-              <caret line="49" column="8" selection-start-line="49" selection-start-column="2" selection-end-line="49" selection-end-column="8" />
+            <state vertical-scroll-proportion="2.176287">
+              <caret line="93" column="8" selection-start-line="93" selection-start-column="8" selection-end-line="93" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -59,7 +50,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/NumberOfChildren/NumberOfChildren.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -68,8 +59,8 @@
       <file leaf-file-name="ChildNamesInputs.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/ChildNamesInputs/ChildNamesInputs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.518518">
-              <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="27" column="84" selection-start-line="27" selection-start-column="84" selection-end-line="27" selection-end-column="84" />
               <folding />
             </state>
           </provider>
@@ -78,18 +69,8 @@
       <file leaf-file-name="validationRules.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/node_modules/formsy-react/src/validationRules.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-0.0">
               <caret line="42" column="6" selection-start-line="42" selection-start-column="2" selection-end-line="42" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -121,8 +102,8 @@
         <option value="$PROJECT_DIR$/src/components/USDAForm/USDAForm.js" />
         <option value="$PROJECT_DIR$/node_modules/formsy-react/src/main.js" />
         <option value="$PROJECT_DIR$/src/components/NumberOfChildren/NumberOfChildren.js" />
-        <option value="$PROJECT_DIR$/src/components/Section1/Section1.js" />
         <option value="$PROJECT_DIR$/src/components/ChildNamesInputs/ChildNamesInputs.js" />
+        <option value="$PROJECT_DIR$/src/components/Section1/Section1.js" />
       </list>
     </option>
   </component>
@@ -162,7 +143,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -269,6 +249,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -443,9 +424,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1451672196236" expanded="true" signature="315:369" placeholder="&lt;xml/&gt;" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -509,9 +488,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="59" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
-          <folding>
-            <marker date="1451672196236" expanded="true" signature="315:369" placeholder="&lt;xml/&gt;" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -680,7 +657,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -721,8 +697,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/formsy-react/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.95114005">
+        <state vertical-scroll-proportion="8.237129">
           <caret line="352" column="0" selection-start-line="352" selection-start-column="0" selection-end-line="352" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ChildNamesInputs/ChildNamesInputs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="84" selection-start-line="27" selection-start-column="84" selection-end-line="27" selection-end-column="84" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -734,10 +725,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app.js">
+    <entry file="file://$PROJECT_DIR$/src/components/NumberOfChildren/NumberOfChildren.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -746,32 +737,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <marker date="1451672196236" expanded="true" signature="315:369" placeholder="&lt;xml/&gt;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/NumberOfChildren/NumberOfChildren.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ChildNamesInputs/ChildNamesInputs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.518518">
-          <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Section1/Section1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33224756">
-          <caret line="49" column="8" selection-start-line="49" selection-start-column="2" selection-end-line="49" selection-end-column="8" />
+        <state vertical-scroll-proportion="2.176287">
+          <caret line="93" column="8" selection-start-line="93" selection-start-column="8" selection-end-line="93" selection-end-column="8" />
           <folding />
         </state>
       </provider>
