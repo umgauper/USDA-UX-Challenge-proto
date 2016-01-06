@@ -5,10 +5,10 @@ class ChildNamesInputs extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      theFirstName: '',
-      errorMessages: [] //Used custom validation here instead of formsy-react, because each input requires its own validation, formsy only allowed
-                        //one validation for all of the ChildNamesInputs component
-                        //TODO: split each input into separate component? would that be cleaner, or just make it more complex?!
+      nameIsValidOrEmpty: [], //Used custom validation here instead of formsy-react, because each input requires its own validation, formsy only allowed
+      allNamesValid: false                  //one validation for all of the ChildNamesInputs component
+                        //should these be in Section1 state?? hmm...
+                        //TODO: disable Next if any inputs are empty or invalid (except m.i.)
     }
   }
 
@@ -17,15 +17,34 @@ class ChildNamesInputs extends Component {
     var num = this.props.UserInputFunctions.length;
 
     while(num > 0) {
-      that.state.errorMessages.push(['', '', '']);
+      that.state.nameIsValidOrEmpty.push([true, true, true]);
       num--;
     }
 
+    var getErrorMessage = function(bool) {
+      if (bool) {
+        return ''
+      } else {
+        return 'Please enter a valid name'
+      }
+    };
+
+    var isAllInputsValid = function(arr) { //TODO: this needs to be in the STATE, so button will update... but how?? hmm...
+      //check each time input is entered? yeah...
+      // return false
+      arr.forEach(function(arr) {
+        if(arr.indexOf(false) > -1) {
+          return false
+        }
+      });
+      return true
+    };
+
     var validateName = function(regexp, inputIndex, nameIndex, value) {
       if ( regexp.test(value) || !value ) {
-        that.state.errorMessages[inputIndex][nameIndex] = ''
+        that.state.nameIsValidOrEmpty[inputIndex][nameIndex] = true;
       } else {
-        that.state.errorMessages[inputIndex][nameIndex] = 'Please enter a valid name';
+        that.state.nameIsValidOrEmpty[inputIndex][nameIndex] = false;
       }
     };
 
@@ -34,18 +53,21 @@ class ChildNamesInputs extends Component {
         that.props.setValue(event.target.value);
         validateName(/^[a-zA-Z\-]+$/, index, 0, event.target.value);
         func[0](event);
+        that.state.allNamesValid = isAllInputsValid(that.state.nameIsValidOrEmpty)
       };
 
       var func1 = function(event) {
         that.props.setValue(event.target.value);
         validateName(/^[a-zA-Z]$/, index, 1, event.target.value);
         func[1](event);
+        that.state.allNamesValid = isAllInputsValid(that.state.nameIsValidOrEmpty)
       };
 
       var func2 = function(event) {
         that.props.setValue(event.target.value);
         validateName(/^[a-zA-Z]+\-*[a-zA-Z]*$/, index, 2, event.target.value);
         func[2](event);
+        that.state.allNamesValid = isAllInputsValid(that.state.nameIsValidOrEmpty)
       };
 
       return <div>
@@ -53,7 +75,7 @@ class ChildNamesInputs extends Component {
                       onChange={func0}
                       className="first"
                       />
-               <span>{that.state.errorMessages[index][0]}
+               <span>{getErrorMessage(that.state.nameIsValidOrEmpty[index][0])}
                </span>
 
                <input name={that.props.name}
@@ -61,19 +83,20 @@ class ChildNamesInputs extends Component {
                       className="middle"
                       maxLength="1"
                       type="text"/>
-                <span>{that.state.errorMessages[index][1]}
+                <span>{getErrorMessage(that.state.nameIsValidOrEmpty[index][1])}
                </span>
                <input name={that.props.name}
                       onChange={func2}
                       className="last"/>
-                <span>{that.state.errorMessages[index][2]}
+                <span>{getErrorMessage(that.state.nameIsValidOrEmpty[index][2])}
                 </span>
              </div>
     });
     return <div>
             <h3>List the first name, middle initial, and last name of each child in your household.</h3>
              {inputs}
-            <button onClick={this.props.handleNextClick}>Next</button>
+            <button onClick={this.props.handleNextClick}
+                    disabled={!this.state.allNamesValid}>Next</button>
           </div>
   }
 }

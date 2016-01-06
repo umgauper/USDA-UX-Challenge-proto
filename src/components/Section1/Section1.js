@@ -3,17 +3,15 @@ import withStyles from '../../decorators/withStyles.js'
 import NumberOfChildren from '../NumberOfChildren'
 import ChildNamesInputs from '../ChildNamesInputs'
 import ChildQuestions from '../ChildQuestions'
+import AssistanceProgramQuestion from '../AssistanceProgramQuestion'
+import CaseNumber from '../CaseNumber'
 
 //@withStyles(styles)
-Formsy.addValidationRule('isName', function(values, value) {
-  return /^[a-z]+\-[a-z]+$|^[a-z]+$/.test(value);
-});
-
 class Section1 extends Component {
   constructor(props) {
     super(props); //what is this doing?
     this.state = {
-      i: 0,
+      i: 3,
       j: 0,
       children: []
     };
@@ -22,16 +20,16 @@ class Section1 extends Component {
       var arr = [];
       var num = event.target.value;
       while (num > 0) {
-        arr.push({name: [], isStudent: null, isFoster: null, isMigrantEtc: null});
+        arr.push({name: [], isStudent: null, isFoster: null, isMigrantEtc: null}); //TODO: this data should be stored outside of state, state only needs child first names, i and j
         num--;
       }
       this.state.children = arr;
       console.log(event);
     };
 
-    this.handleNextClick = function () {
+    this.increaseSubsectionIndexBy = function (num) {
       var i = this.state.i;
-      this.setState({i: i + 1});
+      this.setState({i: i + num});
     };
 
     this.handleUserInputNames = function(childIndex, nameIndex, event) {
@@ -82,7 +80,7 @@ class Section1 extends Component {
     var subsections = [
      <NumberOfChildren
        name="number"
-       handleNextClick={this.handleNextClick.bind(this)}
+       handleNextClick={this.increaseSubsectionIndexBy.bind(this, 1)}
        handleUserInputNumber={this.handleUserInputNumber.bind(this)}
        validations="isNumeric"
        validationError="Please enter a valid number"
@@ -90,7 +88,7 @@ class Section1 extends Component {
      <ChildNamesInputs
        name="child-names"
        UserInputFunctions={UserInputFunctions}
-       handleNextClick={this.handleNextClick.bind(this)}
+       handleNextClick={this.increaseSubsectionIndexBy.bind(this, 1)}
      />,
      <ChildQuestions
        IsStudentFunctions={IsStudentFunctions}
@@ -98,7 +96,15 @@ class Section1 extends Component {
        IsMigrantFunctions={IsMigrantFunctions}
        j={this.state.j}
        children={this.state.children}
-     />];
+     />,
+     <AssistanceProgramQuestion
+       handleYesClick={this.increaseSubsectionIndexBy.bind(this, 1)}
+       handleNoClick={this.increaseSubsectionIndexBy.bind(this, 2)}
+     />,
+      <CaseNumber
+        handleNextClick={this.increaseSubsectionIndexBy.bind(this, 1)}
+      />
+    ];
     return <div>{subsections[this.state.i]}</div>;
   }
 }

@@ -27,7 +27,7 @@ class NumberOfChildren extends Component {
               value={this.props.getValue()}
               onChange={handleInput}
               className="number"
-              maxLength="2"/> //possible that any household has >= 100 children?
+              maxLength="2"/>
              <button
                onClick={handleClick}
                disabled={errorMessage || !this.props.getValue()}>Next
