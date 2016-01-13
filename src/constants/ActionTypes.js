@@ -3,5 +3,6 @@
 import keyMirror from 'fbjs/lib/keyMirror';
 
 export default keyMirror({
-
+  SAVE_FORM_DATA: null,
+  INCREASE_SUBSECTION: null
 });
